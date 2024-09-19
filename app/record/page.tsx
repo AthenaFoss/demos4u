@@ -1,12 +1,19 @@
-import ScreenRecorder from '@/components/recorder/ScreenRecorder'
-import React from 'react'
+'use client'
 
-const RecordPage = () => {
+import ScreenRecorder from "@/components/recorder/ScreenRecorder";
+
+
+
+export default function Page() {
+  const handleRecordingComplete = (blob: Blob) => {
+    console.log('Recording complete. Blob:', blob);
+    // Further processing like uploading or editing can be handled here
+  };
   return (
-    <div>
-      <ScreenRecorder/>
+    <div className="w-full h-screen mx-auto">
+      <ScreenRecorder
+      onRecordingComplete={handleRecordingComplete} 
+      />
     </div>
-  )
+  );
 }
-
-export default RecordPage
