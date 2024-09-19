@@ -10,7 +10,7 @@ export default function Page() {
     // Further processing like uploading or editing can be handled here
   };
   return (
-    <div className="w-full h-screen mx-auto">
+    <div className="lg:w-[1400px] h-screen mx-auto">
       <ScreenRecorder
       onRecordingComplete={handleRecordingComplete} 
       />
